@@ -1,1 +1,4 @@
 fishd.*
+configs/*
+!configs/default.config
+!configs/README.md
