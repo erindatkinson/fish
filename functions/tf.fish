@@ -21,6 +21,10 @@ function tf --description 'wrapper for terraform'
     case "s" "show"
       terraform state show $argv[3..-1]
     end
+  case "ss"
+    terraform state show $argv[2..-1]
+  case "sl"
+    terraform state list $argv[2..-1]
   case "f" "fmt"
     terraform fmt $argv[2..-1]
   case "i" "init"
