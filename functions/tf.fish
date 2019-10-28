@@ -42,6 +42,12 @@ function tf --description 'wrapper for terraform'
     case "s" "sh" "show"
       terraform workspace show $argv[3..-1]
     end
+  case "wc"
+    terraform workspace select $argv[2..-1]
+  case "ws"
+    terraform workspace show $argv[2..-1]
+  case "wl"
+    terraform workspace list $argv[2..-1]
   case "v" "ver" "version"
     terraform version $argv[2..-1]
   case "va" "val" "validate"
