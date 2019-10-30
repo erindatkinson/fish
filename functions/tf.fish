@@ -29,6 +29,8 @@ function tf --description 'wrapper for terraform'
     terraform fmt $argv[2..-1]
   case "i" "init"
     terraform init $argv[2..-1]
+  case "o" "output"
+    terraform output $argv[2..-1]
   case "w" "work" "workspace"
     switch $argv[2]
     case "n" "new"
