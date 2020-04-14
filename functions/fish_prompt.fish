@@ -82,7 +82,17 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 
     printf '%s ' (__fish_vcs_prompt)
+    
+    if test -z $LOCAL_ENV_NAME
+        if test -n "$AWS_VAULT"
+            printf "(aws-$AWS_VAULT) "
+        end
+        printf ""
 
+    else
+        printf "($LOCAL_ENV_NAME) "
+    end
+    
     if not test $last_status -eq 0
         set_color $fish_color_error
         echo -n "[$last_status] "

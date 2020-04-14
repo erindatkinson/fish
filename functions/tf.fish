@@ -6,8 +6,8 @@ function tf --description 'wrapper for terraform'
     terraform plan $argv[2..-1]
   case "po"
     terraform plan --out $argv[2..-1]
-  case "d" "del" "delete"
-    terraform delete $arg[2..-1]
+  case "d" "del" "delete" "destroy"
+    terraform destroy $argv[2..-1]
   case "s" "state"
     switch $argv[2]
     case "l" "list"
