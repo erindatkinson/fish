@@ -2,3 +2,9 @@ fishd.*
 configs/*
 !configs/default.config
 !configs/README.md
+
+# Don't add work specific funcs
+doormat*
+door.fish
+reg-screen.fish
+rotate-zoom.fish

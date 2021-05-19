@@ -1,6 +1,4 @@
 set EDITOR 'code --wait'
-set GOPATH ~/go
-set PATH ~/go/bin $PATH
 set SHELL /usr/local/bin/fish
 set PATH ~/.local/share $PATH
 set PATH ~/.local/share/bin $PATH
@@ -11,3 +9,9 @@ for conf in (ls ~/.config/fish/configs/*.config)
 end
 
 status --is-interactive; and rbenv init - | source
+set -g fish_user_paths "/usr/local/opt/postgresql@9.6/bin" $fish_user_paths
+
+
+set -gx GOPATH $HOME/go; set -gx GOROOT $HOME/.go; set -gx PATH $GOPATH/bin $PATH; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+nvm use > /dev/null
