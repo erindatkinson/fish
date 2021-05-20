@@ -75,6 +75,15 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 
     printf '%s ' (fish_vcs_prompt)
+    
+    if test -z $LOCAL_ENV_NAME
+        if test -n "$AWS_VAULT"
+            printf "(aws-$AWS_VAULT) "
+        end
+        printf ""
+    else
+        printf "($LOCAL_ENV_NAME) "
+    end
 
     set -l pipestatus_string (__fish_print_pipestatus "[" "] " "|" (set_color $fish_color_status) (set_color --bold $fish_color_status) $last_pipestatus)
     echo -n $pipestatus_string
