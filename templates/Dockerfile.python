@@ -1,0 +1,6 @@
+FROM python:3 AS builder
+COPY . /project
+RUN pip wheel -r /project/requirements.txt
+FROM python:3-slim
+COPY --from=builder /*.whl /tmp
+RUN pip install /tmp/*.whl
