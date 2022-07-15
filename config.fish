@@ -1,5 +1,7 @@
 set EDITOR 'code --wait'
 set SHELL /usr/local/bin/fish
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 set PATH ~/.local/share $PATH
 set PATH ~/.local/share/bin $PATH
 set PATH ~/.rbenv/bin $PATH
