@@ -6,6 +6,7 @@ set PATH ~/.local/share $PATH
 set PATH ~/.local/share/bin $PATH
 set PATH ~/.rbenv/bin $PATH
 set PATH /usr/local/bin $PATH
+set PATH ~/.config/fish/scripts $PATH
 # Allow for groupings of other configs easily.
 for conf in (ls ~/.config/fish/configs/*.config)
     source $conf
