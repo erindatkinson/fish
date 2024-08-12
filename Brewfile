@@ -1,3 +1,5 @@
+brew "agg"
+brew "asciinema"
 brew "bat"
 brew "envchain"
 brew "ffmpeg"
