@@ -1,2 +1,2 @@
 #!/usr/bin/env fish
-git cb (string join "/" "eda" $argv[1] (string join "-" $argv[2..-1]))
+git cb (string join "/" "eda" $argv[1] (string join "-" $argv[2..-1] (petname -w 3))
