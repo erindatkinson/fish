@@ -1,3 +1,4 @@
 function aws-ssm --description "aws-ssm-ssh shortcut"
-  aws ssm start-session --target "$argv[1]" --document-name AWS-StartSSHSession --parameters "portNumber=$argv[2]"
+  argparse 'i/instance=' 'p#port=' -- argv
+  aws ssm start-session --target "$_flag_i" --document-name AWS-StartSSHSession --parameters "portNumber=$_flag_p"
 end
